@@ -1,8 +1,8 @@
 import React from 'react';
 import {Layout} from "antd";
 import {Link} from "react-router-dom";
-import categories from "../data/categories.json"
-import Category from "../components/category";
+import categories from "../data/items.json"
+import ItemCard from "./itemCard";
 
 const {Content} = Layout;
 
@@ -12,7 +12,7 @@ const Store = (props:any) => {
                 <div className="grid grid-cols-4 gap-4">
                 {
                          categories.map(({id, title, brand="brand", description="description", price=240, imageUrl}) => (
-                                     <Category key={id} title={title} brand={brand} description={description} price={price} imageUrl={imageUrl}/>
+                                     <ItemCard key={id} id={id} title={title} brand={brand} description={description} price={price} imageUrl={imageUrl}/>
                          ))
                      }
                 </div>

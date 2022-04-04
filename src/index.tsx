@@ -8,15 +8,20 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Account from './routes/account';
 import Cart from './routes/cart';
 import Store from "./components/store";
+import ItemDetails from "./components/itemDetails";
+import StoreHome from "./components/storeHome";
 
 const root = createRoot(document.getElementById('root') as HTMLDivElement);
 root.render(
     <BrowserRouter>
         <Routes>
             <Route path={'/'} element={<App/>}>
-                <Route path={'/'} element={<Store/>}/>
+                <Route path={'/'} element={<StoreHome/>}/>
                 <Route path={'/account'} element={<Account/>}/>
                 <Route path={'/cart'} element={<Cart/>}/>
+                <Route path="item">
+                    <Route path=":id" element={<ItemDetails/>}/>
+                </Route>
                 <Route
                     path="*"
                     element={

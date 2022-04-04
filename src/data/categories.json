@@ -1,42 +1,23 @@
 [
   {
     "id": 1,
-    "title": "big hat",
-    "brand": "Burberry",
-    "description": "Horseferry-embroidered cap",
-    "price": 295,
-    "imageUrl": "https://cdn-images.farfetch-contents.com/16/73/31/33/16733133_33235160_1000.jpg"
+    "name": "clothing",
+    "image": "https://images-eu.ssl-images-amazon.com/images/G/37/AMAZON-FASHION/2022/FASHION/FLIP/03_APRIL/M/02_02.jpg",
+    "subcategories": ["Coats", "Denim", "Jackets", "Polo Shirts", "Shorts", "Suits", "Sweaters", "Trousers", "T-Shirts"],
+    "brands": ["Gucci", "Balenciaga", "AMIRI", "Yohji Yamamoto", "Nike", "Heron Preston"]
   },
   {
     "id": 2,
-    "title": "cool jacket",
-    "brand": "AMIRI",
-    "description": "tie-dye fleece zip-up jacket",
-    "price": 1675,
-    "imageUrl": "https://cdn-images.farfetch-contents.com/17/51/42/62/17514262_38833244_1000.jpg"
+    "name": "Electronics",
+    "image": "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SL1500_.jpg",
+    "subcategories": ["Desktops", "Laptops", "Monitors", "Keyboards", "Mice", "Smartphones", "Speakers", "Cameras", "Televisions"],
+    "brands": ["Dell", "Lenovo", "Philips", "LG", "Canon", "AOC", "Logitech"]
   },
   {
     "id": 3,
-    "title": "fast shoes",
-    "brand": "Balenciaga",
-    "description": "Triple S faux-leather sneakers",
-    "price": 850,
-    "imageUrl": "https://cdn-images.farfetch-contents.com/17/73/16/65/17731665_37827946_1000.jpg"
-  },
-  {
-    "id": 4,
-    "title": "shirt",
-    "brand": "Yohji Yamamoto",
-    "description": "long sleeve shirt",
-    "price": 1142,
-    "imageUrl": "https://cdn-images.farfetch-contents.com/17/88/89/61/17888961_38766402_1000.jpg"
-  },
-  {
-    "id": 5,
-    "title": "another jacket",
-    "brand": "Heron Perston",
-    "description": "Triple S faux-leather sneakers",
-    "price": 551,
-    "imageUrl": "https://cdn-images.farfetch-contents.com/17/18/51/94/17185194_36287917_1000.jpg"
+    "name": "Toys",
+    "image": "https://m.media-amazon.com/images/I/91+ol-S+IpL._AC_SX679_.jpg",
+    "subcategories": ["Cars", "Action Figures", "Board Games", "Construction"],
+    "brands": ["Hasbro", "DC", "Marvel", "Lego"]
   }
 ]

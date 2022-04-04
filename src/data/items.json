@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "big hat",
+    "brand": "Burberry",
+    "description": "Horseferry-embroidered cap",
+    "price": 295,
+    "imageUrl": ["https://cdn-images.farfetch-contents.com/16/73/31/33/16733133_33235160_1000.jpg", "https://cdn-images.farfetch-contents.com/16/73/31/33/16733133_33235164_1000.jpg"]
+  },
+  {
+    "id": 2,
+    "title": "cool jacket",
+    "brand": "AMIRI",
+    "description": "tie-dye fleece zip-up jacket",
+    "price": 1675,
+    "imageUrl": ["https://cdn-images.farfetch-contents.com/17/51/42/62/17514262_38833244_1000.jpg"]
+  },
+  {
+    "id": 3,
+    "title": "fast shoes",
+    "brand": "Balenciaga",
+    "description": "Triple S faux-leather sneakers",
+    "price": 850,
+    "imageUrl": ["https://cdn-images.farfetch-contents.com/17/73/16/65/17731665_37827946_1000.jpg"]
+  },
+  {
+    "id": 4,
+    "title": "shirt",
+    "brand": "Yohji Yamamoto",
+    "description": "long sleeve shirt",
+    "price": 1142,
+    "imageUrl": ["https://cdn-images.farfetch-contents.com/17/88/89/61/17888961_38766402_1000.jpg"]
+  },
+  {
+    "id": 5,
+    "title": "another jacket",
+    "brand": "Heron Perston",
+    "description": "Triple S faux-leather sneakers",
+    "price": 551,
+    "imageUrl": ["https://cdn-images.farfetch-contents.com/17/18/51/94/17185194_36287917_1000.jpg"]
+  }
+]

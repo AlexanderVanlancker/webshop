@@ -10,10 +10,12 @@ import Test from "./components/testComponent";
 const { Header, Content, Footer } = Layout;
 
 function App() {
+    console.log("render app");
     return (
         <>
             <Navbar/>
             <div className="flex mb-4" style={{minHeight:"100%"}}>
+
                 <div className="w-1/5">
                     <Sidebar/>
                 </div>

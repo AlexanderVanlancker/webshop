@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import {Menu} from "antd";
 import {Layout} from "antd"
 import {Transition} from "@headlessui/react";
-import Logo from "./logo";
+import Logo from "../icons/logo";
 
 const { Header } = Layout;
 
@@ -14,9 +14,9 @@ function Navbar() {
                 <div className="mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center ml-0">
-                            <div className="flex-shrink-0">
+                            <a href="/" className="flex-shrink-0">
                                 <Logo/>
-                            </div>
+                            </a>
                             <div className="hidden md:block">
                                 <div className="ml-28 pl-2 flex items-baseline space-x-4 ">
 
