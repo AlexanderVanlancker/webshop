@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'antd/dist/antd.css';
+import {Layout} from "antd";
+import Sidebar from "./components/sidebar";
+import Navbar from "./components/navbar";
+import Store from "./components/store";
+import { Outlet, Link } from "react-router-dom";
+import Test from "./components/testComponent";
+
+const { Header, Content, Footer } = Layout;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Navbar/>
+            <div className="flex mb-4" style={{minHeight:"100%"}}>
+                <div className="w-1/5">
+                    <Sidebar/>
+                </div>
+                <div className="w-5/6 mt-12 ml-6">
+                    <Outlet/>
+                </div>
+            </div>
+        </>
+    );
 }
 
 export default App;
