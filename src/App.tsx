@@ -15,13 +15,7 @@ function App() {
         <>
             <Navbar/>
             <div className="flex mb-4" style={{minHeight:"100%"}}>
-
-                <div className="w-1/5">
-                    <Sidebar/>
-                </div>
-                <div className="w-5/6 mt-12 ml-6">
-                    <Outlet/>
-                </div>
+                <Outlet/>
             </div>
         </>
     );

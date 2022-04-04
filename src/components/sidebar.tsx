@@ -4,7 +4,7 @@ function Sidebar() {
         <>
             {/* Sidebar starts */}
             {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
-            <div className="w-64 border-0 absolute sm:relative bg-white  md:h-full flex-col justify-between hidden sm:flex">
+            <div className="w-64 border-0 absolute shadow sm:relative bg-white  md:h-full flex-col justify-between hidden sm:flex">
                 <div className="px-8">
                     <ul className="mt-12">
                         <li className="flex w-full justify-between text-gray-900 items-center mb-6">
