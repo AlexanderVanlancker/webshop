@@ -1,23 +1,27 @@
 import React from 'react';
 import {Layout} from "antd";
 import {Link} from "react-router-dom";
-import items from "../data/items.json"
 import ItemCard from "./itemCard";
 
 const {Content} = Layout;
 
-const Store = (props:any) => {
+const Store = ({clothes}:any) => {
+    console.log(clothes);
     return (
             <>
-                <div className="grid grid-cols-4 gap-4">
+                <div className="flex flex-wrap gap-4 content-evenly px-8 ">
                 {
-                    items.map(({id, title, brand="brand", description="description", price=240, imageUrl}) => (
-                                     <ItemCard key={id} id={id} title={title} brand={brand} description={description} price={price} imageUrl={imageUrl}/>
-                         ))
-                     }
+
+                    clothes.map(({_id=1, Name="Name", Brand="brand", description="description", Price=240, imgUrls=[]}) => (
+                    <ItemCard key={_id} id={_id} Name={Name} Brand={Brand} description={description} Price={Price} imgUrls={imgUrls}/>
+                    ))
+
+                }
                 </div>
             </>
     );
 };
 
 export default Store;
+
+

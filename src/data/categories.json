@@ -2,21 +2,27 @@
   {
     "id": 1,
     "name": "clothing",
-    "image": "https://images-eu.ssl-images-amazon.com/images/G/37/AMAZON-FASHION/2022/FASHION/FLIP/03_APRIL/M/02_02.jpg",
+    "image": "https://cdn.championstore.com/og_image/default/600x600_1_.jpg",
     "subcategories": ["Coats", "Denim", "Jackets", "Polo Shirts", "Shorts", "Suits", "Sweaters", "Trousers", "T-Shirts"],
     "brands": ["Gucci", "Balenciaga", "AMIRI", "Yohji Yamamoto", "Nike", "Heron Preston"]
   },
   {
     "id": 2,
     "name": "Electronics",
-    "image": "https://m.media-amazon.com/images/I/71jG+e7roXL._AC_SL1500_.jpg",
+    "image": "https://www.montblanc.com/variants/images/46353151655575960/A/w2500.jpg",
     "subcategories": ["Desktops", "Laptops", "Monitors", "Keyboards", "Mice", "Smartphones", "Speakers", "Cameras", "Televisions"],
     "brands": ["Dell", "Lenovo", "Philips", "LG", "Canon", "AOC", "Logitech"]
   },
   {
     "id": 3,
     "name": "Toys",
-    "image": "https://m.media-amazon.com/images/I/91+ol-S+IpL._AC_SX679_.jpg",
+    "image": "https://d1jqecz1iy566e.cloudfront.net/large/fa233.jpg",
+    "subcategories": ["Cars", "Action Figures", "Board Games", "Construction"],
+    "brands": ["Hasbro", "DC", "Marvel", "Lego"]
+  },{
+    "id": 4,
+    "name": "Health",
+    "image": "https://www.24pharma.be/media/catalog/product/cache/4c6e528eef49d4d5f962a777dda7df67/p/u/pure_shampoo_250ml_2_7c45.jpg",
     "subcategories": ["Cars", "Action Figures", "Board Games", "Construction"],
     "brands": ["Hasbro", "DC", "Marvel", "Lego"]
   }

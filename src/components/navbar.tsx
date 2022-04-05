@@ -4,7 +4,8 @@ import {Layout} from "antd"
 import {Transition} from "@headlessui/react";
 import Logo from "../icons/logo";
 import {Link} from "react-router-dom";
-
+import SearchField from "./searchField";
+import {Outlet} from "react-router-dom"
 const { Header } = Layout;
 
 function Navbar() {
@@ -15,21 +16,24 @@ function Navbar() {
                 <div className="mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center ml-0">
+
                             <Link to="/" className="flex-shrink-0">
                                 <Logo/>
                             </Link>
+
                             <div className="hidden md:block">
                                 <div className="ml-28 pl-2 flex items-baseline space-x-4 ">
 
-                                    <input type={"search"}
-                                           placeholder={"Search for..."}
-                                           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                           style={{width: "25rem"}}
-                                    />
+                                    <SearchField/>
 
 
                                 </div>
                             </div>
+                        </div>
+                        <div className="flex flex-col lg:flex-row list-none lg:ml-auto">
+                            <Link to="testroute" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" >
+                                Login
+                            </Link>
                         </div>
                         <div className="-mr-2 flex md:hidden">
                             <button
@@ -129,7 +133,7 @@ function Navbar() {
                     )}
                 </Transition>
             </nav>
-
+            <Outlet/>
         </div>
     );
 }

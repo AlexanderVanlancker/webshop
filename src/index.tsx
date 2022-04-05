@@ -9,24 +9,33 @@ import Account from './routes/account';
 import Cart from './routes/cart';
 import Store from "./components/store";
 import ItemDetails from "./components/itemDetails";
-import StoreHome from "./components/storeHome";
+import Categories from "./components/categories";
 import Sidebar from './components/sidebar';
 import ItemList from "./containers/itemList";
+import ItemDetailsContainer from "./containers/itemDetailsContainer";
+import Navbar from "./components/navbar";
+import TestComponent from "./components/testComponent"
 
 const root = createRoot(document.getElementById('root') as HTMLDivElement);
 root.render(
     <BrowserRouter>
         <Routes>
-            <Route path={'/'} element={<App/>}>
-                <Route path={'/'} element={<StoreHome/>}/>
-                <Route path={'/account'} element={<Account/>}/>
+            <Route path="testroute" element={<TestComponent/>}/>
+            <Route path='/' element={<Navbar/>}>
+                <Route index element={<Categories/>}/>
+                <Route path="account" element={<Account/>}/>
                 <Route path="cart" element={<Cart/>}/>
-                <Route path="items" element={<ItemList/>}>
-                    <Route path=":id" element={<ItemDetails/>}/>
+                <Route path="items/" element={<ItemList/>}>
+                    <Route path=":id" element={<ItemDetailsContainer/>}/>
                     {
                         //fix this is not working}
                     }
                 </Route>
+
+                <Route path="test">
+                    <Route path=":id" element={<ItemDetailsContainer/>}/>
+                </Route>
+
                 <Route
                     path="*"
                     element={

@@ -3,11 +3,10 @@ import {useParams} from "react-router-dom";
 import items from "../data/items.json";
 import {ShoppingCartIcon} from "@heroicons/react/outline";
 
-const ItemDetails = () => {
-    const params = useParams();
-    const id = parseInt(params.id as string);
-    const item = items.find((item) => item.id == id);
-    const {imageUrl, brand, description, price}: any = item;
+const ItemDetails = (item:any) => {
+    console.log(item.item)
+    const {imageUrl, brand, description, price}: any = item.item;
+    console.log(imageUrl, brand, description)
     return (
         <>
             <div className="flex mb-4 block">
