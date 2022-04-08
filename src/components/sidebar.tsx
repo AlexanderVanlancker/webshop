@@ -1,64 +1,32 @@
 import React from "react";
-function Sidebar() {
+
+function Sidebar(props: any) {
+    //differentiate between checkbox props and not
+    let itemList = Object.keys(props).map(function (prop, index) {
+        const keys = props[prop]
+        let temp = Object.keys(keys).map(function (key, index) {
+            return <li className="text-gray-600 text-sm pb-1.5 flex justify-between">
+                <div className="flex">
+                    <input type="checkbox" className="mr-2" value={key}></input><label>{key}</label>
+
+                </div>
+                <span className="text-right flex justify-end">{keys[key] > 0 ? keys[key] : ""}</span></li>
+        });
+        temp.unshift(<h1 className="w-44 border-b text-base pb-1 mb-3">{prop}</h1>)
+        temp.push(<div className="mb-4"></div>)
+        return temp;
+    });
+
     return (
         <>
-            {/* Sidebar starts */}
-            {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
-            <div className="w-64 border-0 absolute shadow sm:relative bg-white  md:h-full flex-col justify-between hidden sm:flex">
-                <div className="px-8">
-                    <ul className="mt-12">
-                        <li className="flex w-full justify-between text-gray-900 items-center mb-6">
-                            <div className="flex items-center">
-                                <span className="text-sm  ml-2 ">
-                                    <h1 className="w-44 border-b pb-2">Categories</h1>
-                                <ul className="hover:cursor-pointer">
-                                    <li className="text-gray-600 pb-1">
-                                        Shirts
-                                    </li>
-                                    <li className="text-gray-600 pb-1">
-                                        Sweaters
-                                    </li>
-                                    <li className="text-gray-600 pb-1">
-                                        Jeans
-                                    </li>
-                                </ul></span>
-                            </div>
-                        </li>
-                        <li className="flex w-full justify-between text-gray-900 items-center mb-6">
-                            <div className="flex items-center">
-                                <span className="text-sm  ml-2 ">
-                                    <h1 className="w-44 border-b pb-2">Size</h1>
-                                <ul className="hover:cursor-pointer">
-                                    <li className="text-gray-600 pb-1">
-                                        Small
-                                    </li>
-                                    <li className="text-gray-600 pb-1">
-                                        Medium
-                                    </li>
-                                    <li className="text-gray-600 pb-1">
-                                        Large
-                                    </li>
-                                </ul></span>
-                            </div>
-                        </li>
-                        <li className="flex w-full justify-between text-gray-900 items-center mb-6">
-                            <div className="flex items-center">
-                                <span className="text-sm  ml-2 ">
-                                    <h1 className="w-44 border-b pb-2">Brand</h1>
-                                <ul className="hover:cursor-pointer">
-                                    <li className="text-gray-600 pb-1">
-                                        Gucci
-                                    </li>
-                                    <li className="text-gray-600 pb-1">
-                                        Balenciaga
-                                    </li>
-                                    <li className="text-gray-600 pb-1">
-                                        Nike
-                                    </li>
-                                </ul></span>
-                            </div>
-                        </li>
-                    </ul>
+            <div
+                className="w-64 border-0 absolute shadow sm:relative bg-white  md:h-full flex-col justify-between hidden sm:flex">
+                <div className="px-8 mt-10 flex w-full justify-between text-gray-900 items-center mb-6">
+                    <div className="flex items-center">
+                        <span className="text-sm ml-2">
+                                {itemList}
+                        </span>
+                    </div>
                 </div>
             </div>
         </>

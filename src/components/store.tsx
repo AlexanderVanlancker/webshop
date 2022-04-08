@@ -6,7 +6,6 @@ import ItemCard from "./itemCard";
 const {Content} = Layout;
 
 const Store = ({clothes}:any) => {
-    console.log(clothes);
     return (
             <>
                 <div className="flex flex-wrap gap-4 content-evenly px-8 ">

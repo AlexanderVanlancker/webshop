@@ -16,6 +16,7 @@ const ItemDetailsContainer = () => {
                 <Sidebar/>
             </div>
             <div className="w-5/6 mt-12 ml-6">
+                <p>feseifjdisghiush</p>
                 <ItemDetails item={item}/>
             </div>
         </>

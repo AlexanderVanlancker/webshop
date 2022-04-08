@@ -9,10 +9,9 @@ import Account from './routes/account';
 import Cart from './routes/cart';
 import Store from "./components/store";
 import ItemDetails from "./components/itemDetails";
-import Categories from "./components/categories";
+import CategoryList from "./containers/categoryList";
 import Sidebar from './components/sidebar';
 import ItemList from "./containers/itemList";
-import ItemDetailsContainer from "./containers/itemDetailsContainer";
 import Navbar from "./components/navbar";
 import TestComponent from "./components/testComponent"
 
@@ -22,18 +21,15 @@ root.render(
         <Routes>
             <Route path="testroute" element={<TestComponent/>}/>
             <Route path='/' element={<Navbar/>}>
-                <Route index element={<Categories/>}/>
+                <Route index element={<CategoryList/>}/>
                 <Route path="account" element={<Account/>}/>
                 <Route path="cart" element={<Cart/>}/>
-                <Route path="items/" element={<ItemList/>}>
-                    <Route path=":id" element={<ItemDetailsContainer/>}/>
-                    {
-                        //fix this is not working}
-                    }
+                <Route path="items" >
+                    <Route path=":category" element={<ItemList/>}></Route>
                 </Route>
 
                 <Route path="test">
-                    <Route path=":id" element={<ItemDetailsContainer/>}/>
+                    <Route path=":id" element={<ItemDetails/>}/>
                 </Route>
 
                 <Route
